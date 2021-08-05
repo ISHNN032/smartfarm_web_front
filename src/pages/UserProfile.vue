@@ -17,9 +17,8 @@ export default {
   components: {
     EditProfileForm,
     UserCard,
-    MembersCard,
-  },
+    MembersCard
+  }
 };
 </script>
-<style>
-</style>
+<style></style>

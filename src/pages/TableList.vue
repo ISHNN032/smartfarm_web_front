@@ -63,12 +63,7 @@
 import { PaperTable } from "@/components";
 import axios from "axios";
 import Button from "../components/Button.vue";
-const tableColumns = [
-  "id",
-  "createtimestamp",
-  "state",
-  "value"
-];
+const tableColumns = ["id", "createtimestamp", "state", "value"];
 const tableData = [];
 
 export default {
@@ -121,15 +116,20 @@ export default {
     getDatas: function() {
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/login")
-        .then(response =>{
+        .then(response => {
           window.console.log(response);
         })
         .catch(error => window.console.log(error));
 
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/api/temp")
-        .then(response =>{
-          var vv = JSON.stringify(response.data).replace(/"([^"]+)":/g,function($0,$1){return ('"'+$1.toLowerCase()+'":');});
+        .then(response => {
+          var vv = JSON.stringify(response.data).replace(
+            /"([^"]+)":/g,
+            function($0, $1) {
+              return '"' + $1.toLowerCase() + '":';
+            }
+          );
           this.patch("temp", JSON.parse(vv));
         })
         .catch(error => window.console.log(error));
@@ -137,7 +137,12 @@ export default {
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/api/humi")
         .then(response => {
-          var vv = JSON.stringify(response.data).replace(/"([^"]+)":/g,function($0,$1){return ('"'+$1.toLowerCase()+'":');});
+          var vv = JSON.stringify(response.data).replace(
+            /"([^"]+)":/g,
+            function($0, $1) {
+              return '"' + $1.toLowerCase() + '":';
+            }
+          );
           this.patch("humi", JSON.parse(vv));
         })
         .catch(error => window.console.log(error));
@@ -145,7 +150,12 @@ export default {
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/api/windd")
         .then(response => {
-          var vv = JSON.stringify(response.data).replace(/"([^"]+)":/g,function($0,$1){return ('"'+$1.toLowerCase()+'":');});
+          var vv = JSON.stringify(response.data).replace(
+            /"([^"]+)":/g,
+            function($0, $1) {
+              return '"' + $1.toLowerCase() + '":';
+            }
+          );
           this.patch("windd", JSON.parse(vv));
         })
         .catch(error => window.console.log(error));
@@ -153,7 +163,12 @@ export default {
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/api/winds")
         .then(response => {
-          var vv = JSON.stringify(response.data).replace(/"([^"]+)":/g,function($0,$1){return ('"'+$1.toLowerCase()+'":');});
+          var vv = JSON.stringify(response.data).replace(
+            /"([^"]+)":/g,
+            function($0, $1) {
+              return '"' + $1.toLowerCase() + '":';
+            }
+          );
           this.patch("winds", JSON.parse(vv));
         })
         .catch(error => window.console.log(error));
@@ -161,7 +176,12 @@ export default {
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/api/soilt")
         .then(response => {
-          var vv = JSON.stringify(response.data).replace(/"([^"]+)":/g,function($0,$1){return ('"'+$1.toLowerCase()+'":');});
+          var vv = JSON.stringify(response.data).replace(
+            /"([^"]+)":/g,
+            function($0, $1) {
+              return '"' + $1.toLowerCase() + '":';
+            }
+          );
           this.patch("soilt", JSON.parse(vv));
         })
         .catch(error => window.console.log(error));
@@ -169,7 +189,12 @@ export default {
       axios
         .get("http://localhost:8080/smartfarm-1.0.0/api/soilh")
         .then(response => {
-          var vv = JSON.stringify(response.data).replace(/"([^"]+)":/g,function($0,$1){return ('"'+$1.toLowerCase()+'":');});
+          var vv = JSON.stringify(response.data).replace(
+            /"([^"]+)":/g,
+            function($0, $1) {
+              return '"' + $1.toLowerCase() + '":';
+            }
+          );
           this.patch("soilh", JSON.parse(vv));
         })
         .catch(error => window.console.log(error));

@@ -24,21 +24,21 @@ export default {
     data: Array,
     type: {
       type: String, // striped | hover
-      default: "striped",
+      default: "striped"
     },
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     subTitle: {
       type: String,
-      default: "",
-    },
+      default: ""
+    }
   },
   computed: {
     tableClass() {
       return `table-${this.type}`;
-    },
+    }
   },
   methods: {
     hasValue(item, column) {
@@ -46,9 +46,8 @@ export default {
     },
     itemValue(item, column) {
       return item[column.toLowerCase()];
-    },
-  },
+    }
+  }
 };
 </script>
-<style>
-</style>
+<style></style>

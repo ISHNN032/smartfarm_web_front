@@ -6,18 +6,22 @@
         alt="..."
       />
     </div>
-      <hr />
-      <ul>
-        <li>
-          <div class="row" v-for="member in members" :key="member.name">
-            <div class="wtf">
-              <div class="vvv">
-                <img :src="member.image" alt="Circle Image" class="rounded img-fluid">
-              </div>
+    <hr />
+    <ul>
+      <li>
+        <div class="row" v-for="member in members" :key="member.name">
+          <div class="wtf">
+            <div class="vvv">
+              <img
+                :src="member.image"
+                alt="Circle Image"
+                class="rounded img-fluid"
+              />
             </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </li>
+    </ul>
   </card>
 </template>
 
@@ -43,7 +47,7 @@ export default {
         }
       ]
     };
-  },
+  }
 };
 </script>
 

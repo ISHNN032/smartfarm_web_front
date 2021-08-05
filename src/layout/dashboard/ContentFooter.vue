@@ -3,7 +3,12 @@
     <div class="container-fluid d-flex flex-wrap justify-content-between">
       <nav>
         <ul>
-          <li><a href="http://www.sedar.co.kr/main.php?userAgent=PC" target="_blank">(주)세다</a>
+          <li>
+            <a
+              href="http://www.sedar.co.kr/main.php?userAgent=PC"
+              target="_blank"
+              >(주)세다</a
+            >
             <!-- <router-link :to="{path:'/icons'}">Dashboard</router-link> -->
           </li>
         </ul>

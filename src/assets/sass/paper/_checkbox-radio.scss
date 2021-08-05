@@ -27,7 +27,7 @@
     -webkit-transition: color, opacity 0.15s linear;
     transition: color, opacity 0.15s linear;
 
-    opacity: .50;
+    opacity: 0.5;
   }
 
   &.checked {
@@ -80,7 +80,7 @@
 
 .checkbox:hover .second-icon,
 .radio:hover .second-icon {
-  @include opacity (1);
+  @include opacity(1);
 }
 
 .checkbox.checked,

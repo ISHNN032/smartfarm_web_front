@@ -3,12 +3,12 @@
     <template slot="header">
       <h4 v-if="$slots.title || title" class="card-title">
         <slot name="title">
-          {{title}}
+          {{ title }}
         </slot>
       </h4>
       <p class="card-category">
         <slot name="subTitle">
-          {{subTitle}}
+          {{ subTitle }}
         </slot>
       </p>
     </template>
@@ -18,15 +18,13 @@
         <div class="chart-legend">
           <slot name="legend"></slot>
         </div>
-        <hr>
+        <hr />
         <div class="stats">
           <slot name="footer"></slot>
         </div>
-        <div class="pull-right">
-        </div>
+        <div class="pull-right"></div>
       </div>
     </div>
-
   </card>
 </template>
 <script>
@@ -80,11 +78,7 @@ export default {
      */
     initChart(Chartist) {
       const chartIdQuery = `#${this.chartId}`;
-      Chartist[this.chartType](
-        chartIdQuery,
-        this.chartData,
-        this.chartOptions
-      );
+      Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions);
     },
     /***
      * Assigns a random id to the chart
@@ -100,8 +94,8 @@ export default {
   },
   mounted() {
     this.updateChartId();
-    import('chartist').then((Chartist) => {
-      let ChartistLib = Chartist.default || Chartist ;
+    import("chartist").then(Chartist => {
+      let ChartistLib = Chartist.default || Chartist;
       this.$nextTick(() => {
         this.initChart(ChartistLib);
       });
@@ -109,5 +103,4 @@ export default {
   }
 };
 </script>
-<style>
-</style>
+<style></style>

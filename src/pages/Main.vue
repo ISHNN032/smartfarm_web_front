@@ -113,13 +113,13 @@
 <script>
 import { StatsCard, ChartCard } from "@/components/index";
 import Chartist from "chartist";
-import axios from 'axios';
+import axios from "axios";
 import SensorTable from "../components/SensorTable.vue";
 export default {
   components: {
     StatsCard,
     ChartCard,
-    SensorTable,
+    SensorTable
   },
   /**
    * Chart data used to render stats, charts. Should be replaced with server data
@@ -133,7 +133,7 @@ export default {
           title: "외부온도",
           value: "0°C",
           footerText: "방금 전",
-          footerIcon: "ti-reload",
+          footerIcon: "ti-reload"
         },
         {
           type: "info",
@@ -141,7 +141,7 @@ export default {
           title: "외부습도",
           value: "0%",
           footerText: "방금 전",
-          footerIcon: "ti-timer",
+          footerIcon: "ti-timer"
         },
         {
           type: "success",
@@ -149,7 +149,7 @@ export default {
           title: "풍속",
           value: "0.0m/s",
           footerText: "방금 전",
-          footerIcon: "ti-reload",
+          footerIcon: "ti-reload"
         },
         {
           type: "success",
@@ -157,7 +157,7 @@ export default {
           title: "풍향",
           value: "+0°",
           footerText: "방금 전",
-          footerIcon: "ti-reload",
+          footerIcon: "ti-reload"
         },
         {
           type: "danger",
@@ -165,7 +165,7 @@ export default {
           title: "지온",
           value: "0°C",
           footerText: "방금 전",
-          footerIcon: "ti-calendar",
+          footerIcon: "ti-calendar"
         },
         {
           type: "info",
@@ -173,8 +173,8 @@ export default {
           title: "지습",
           value: "0%",
           footerText: "방금 전",
-          footerIcon: "ti-calendar",
-        },
+          footerIcon: "ti-calendar"
+        }
       ],
       usersChart: {
         data: {
@@ -187,13 +187,13 @@ export default {
             "1월",
             "2월",
             "3월",
-            "4월",
+            "4월"
           ],
           series: [
             [0, 0, 490, 562, 594, 626, 698, 895, 952],
             [67, 152, 193, 240, 387, 435, 535, 642, 744],
-            [23, 113, 67, 108, 190, 239, 307, 410, 410],
-          ],
+            [23, 113, 67, 108, 190, 239, 307, 410, 410]
+          ]
         },
         options: {
           low: 0,
@@ -201,67 +201,83 @@ export default {
           showArea: true,
           height: "245px",
           axisX: {
-            showGrid: false,
+            showGrid: false
           },
           lineSmooth: Chartist.Interpolation.simple({
-            divisor: 3,
+            divisor: 3
           }),
           showLine: true,
-          showPoint: false,
-        },
+          showPoint: false
+        }
       }
     };
   },
 
   methods: {
-    getDatas: function(){
-      axios.get("http://localhost:8080/smartfarm-1.0.0/api/temp")
-        .then(response => {this.patch('temp', response.data)})
+    getDatas: function() {
+      axios
+        .get("http://localhost:8080/smartfarm-1.0.0/api/temp")
+        .then(response => {
+          this.patch("temp", response.data);
+        })
         .catch(error => window.console.log(error));
-      axios.get("http://localhost:8080/smartfarm-1.0.0/api/humi")
-        .then(response => this.patch('humi', response.data))
+      axios
+        .get("http://localhost:8080/smartfarm-1.0.0/api/humi")
+        .then(response => this.patch("humi", response.data))
         .catch(error => window.console.log(error));
-      axios.get("http://localhost:8080/smartfarm-1.0.0/api/winds")
-        .then(response => this.patch('winds', response.data))
+      axios
+        .get("http://localhost:8080/smartfarm-1.0.0/api/winds")
+        .then(response => this.patch("winds", response.data))
         .catch(error => window.console.log(error));
-      axios.get("http://localhost:8080/smartfarm-1.0.0/api/windd")
-        .then(response => this.patch('windd', response.data))
+      axios
+        .get("http://localhost:8080/smartfarm-1.0.0/api/windd")
+        .then(response => this.patch("windd", response.data))
         .catch(error => window.console.log(error));
-      axios.get("http://localhost:8080/smartfarm-1.0.0/api/soilt")
-        .then(response => this.patch('soilt', response.data))
+      axios
+        .get("http://localhost:8080/smartfarm-1.0.0/api/soilt")
+        .then(response => this.patch("soilt", response.data))
         .catch(error => window.console.log(error));
-      axios.get("http://localhost:8080/smartfarm-1.0.0/api/soilh")
-        .then(response => this.patch('soilh', response.data))
+      axios
+        .get("http://localhost:8080/smartfarm-1.0.0/api/soilh")
+        .then(response => this.patch("soilh", response.data))
         .catch(error => window.console.log(error));
     },
-    patch: function(table, data){
+    patch: function(table, data) {
       switch (table) {
-        case 'temp':
-          this.statsCards[0].value = data[0].value + "°C"; break;
-        case 'humi':
-          this.statsCards[1].value = data[0].value + "%"; break;
-        case 'winds':
-          this.statsCards[2].value = data[0].value + "m/s"; break;
-        case 'windd':
-          this.statsCards[3].value = data[0].value + "°"; break;
-        case 'soilt':
-          this.statsCards[4].value = data[0].value + "°C"; break;
-        case 'soilh':
-          this.statsCards[5].value = data[0].value + "%"; break;
+        case "temp":
+          this.statsCards[0].value = data[0].value + "°C";
+          break;
+        case "humi":
+          this.statsCards[1].value = data[0].value + "%";
+          break;
+        case "winds":
+          this.statsCards[2].value = data[0].value + "m/s";
+          break;
+        case "windd":
+          this.statsCards[3].value = data[0].value + "°";
+          break;
+        case "soilt":
+          this.statsCards[4].value = data[0].value + "°C";
+          break;
+        case "soilh":
+          this.statsCards[5].value = data[0].value + "%";
+          break;
       }
     }
   },
-  mounted: function () {
+  mounted: function() {
     this.getDatas();
-    this.pollInterval = setInterval(function () {
-      this.getDatas();
-    }.bind(this), 5000)
+    this.pollInterval = setInterval(
+      function() {
+        this.getDatas();
+      }.bind(this),
+      5000
+    );
   },
 
-  beforeDestroy: function () {
+  beforeDestroy: function() {
     clearInterval(this.pollInterval);
   }
 };
 </script>
-<style>
-</style>
+<style></style>

@@ -14,12 +14,19 @@
           <div class="alert alert-info alert-with-icon" data-notify="container">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span data-notify="icon" class="ti-bell"></span>
-            <span data-notify="message">This is a notification with close button and icon.</span>
+            <span data-notify="message"
+              >This is a notification with close button and icon.</span
+            >
           </div>
           <div class="alert alert-info alert-with-icon" data-notify="container">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span data-notify="icon" class="ti-pie-chart"></span>
-            <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
+            <span data-notify="message"
+              >This is a notification with close button and icon and have many
+              lines. You can see that the icon and the close button are always
+              vertically aligned. This is a beautiful notification. So you don't
+              have to worry about the style.</span
+            >
           </div>
         </div>
         <div class="col-md-6">
@@ -27,76 +34,120 @@
           <div class="alert alert-info">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span>
-              <b> Info - </b> This is a regular notification made with ".alert-info"</span>
+              <b> Info - </b> This is a regular notification made with
+              ".alert-info"</span
+            >
           </div>
           <div class="alert alert-success">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span>
-              <b> Success - </b> This is a regular notification made with ".alert-success"</span>
+              <b> Success - </b> This is a regular notification made with
+              ".alert-success"</span
+            >
           </div>
           <div class="alert alert-warning">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span>
-              <b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
+              <b> Warning - </b> This is a regular notification made with
+              ".alert-warning"</span
+            >
           </div>
           <div class="alert alert-danger">
             <button type="button" aria-hidden="true" class="close">×</button>
             <span>
-              <b> Danger - </b> This is a regular notification made with ".alert-danger"</span>
+              <b> Danger - </b> This is a regular notification made with
+              ".alert-danger"</span
+            >
           </div>
         </div>
       </div>
 
-      <br>
-      <br>
+      <br />
+      <br />
 
       <div class="places-buttons">
         <div class="row d-flex justify-content-center">
           <div>
-            <h5>Notifications Places
+            <h5>
+              Notifications Places
               <p class="category">Click to view notifications</p>
             </h5>
           </div>
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('top', 'left')">Top Left</p-button>
+            <p-button
+              round
+              outline
+              block
+              @click.native="notifyVue('top', 'left')"
+              >Top Left</p-button
+            >
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('top', 'center')">Top Center</p-button>
+            <p-button
+              round
+              outline
+              block
+              @click.native="notifyVue('top', 'center')"
+              >Top Center</p-button
+            >
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('top', 'right')">Top Right</p-button>
+            <p-button
+              round
+              outline
+              block
+              @click.native="notifyVue('top', 'right')"
+              >Top Right</p-button
+            >
           </div>
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('bottom', 'left')">Bottom Left</p-button>
+            <p-button
+              round
+              outline
+              block
+              @click.native="notifyVue('bottom', 'left')"
+              >Bottom Left</p-button
+            >
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('bottom', 'center')">Bottom Center</p-button>
+            <p-button
+              round
+              outline
+              block
+              @click.native="notifyVue('bottom', 'center')"
+              >Bottom Center</p-button
+            >
           </div>
           <div class="col-md-3">
-            <p-button round outline block @click.native="notifyVue('bottom', 'right')">Bottom Right</p-button>
+            <p-button
+              round
+              outline
+              block
+              @click.native="notifyVue('bottom', 'right')"
+              >Bottom Right</p-button
+            >
           </div>
-
         </div>
       </div>
     </div>
-
 
     <div class="row">
       <div class="col-md-12">
         <card>
           <template slot="header">
             <h4 class="card-title">320+ Themify Icons</h4>
-            <p class="card-category">Handcrafted by our friends from
-              <a target="_blank" href="https://themify.me/">Themify</a>.</p>
+            <p class="card-category">
+              Handcrafted by our friends from
+              <a target="_blank" href="https://themify.me/">Themify</a>.
+            </p>
           </template>
           <div class="content all-icons">
-
             <div class="icon-section">
-              <h3>Arrows &amp; Direction Icons </h3>
+              <h3>Arrows &amp; Direction Icons</h3>
 
               <div class="icon-container">
                 <span class="ti-arrow-up"></span>
@@ -231,14 +282,12 @@
                 <span class="ti-exchange-vertical"></span>
                 <span class="icon-name"> ti-exchange-vertical</span>
               </div>
-
             </div>
             <!-- Arrows Icons -->
 
             <h3>Web App Icons</h3>
 
             <div class="icon-section">
-
               <div class="icon-container">
                 <span class="ti-wand"></span>
                 <span class="icon-name"> ti-wand</span>
@@ -1019,7 +1068,6 @@
                 <span class="ti-rss-alt"></span>
                 <span class="icon-name"> ti-rss-alt</span>
               </div>
-
             </div>
             <!-- Web App Icons -->
 
@@ -1132,7 +1180,6 @@
                 <span class="ti-quote-left"></span>
                 <span class="icon-name"> ti-quote-left</span>
               </div>
-
             </div>
             <!-- Text Editor -->
 
@@ -1386,7 +1433,6 @@
                 <span class="ti-layout-column2-alt"></span>
                 <span class="icon-name"> ti-layout-column2-alt</span>
               </div>
-
             </div>
             <!-- Layout Icons -->
 
@@ -1560,19 +1606,16 @@
                 <span class="ti-themify-favicon-alt"></span>
                 <span class="icon-name"> ti-themify-favicon-alt</span>
               </div>
-
             </div>
             <!-- brand Icons -->
-
           </div>
         </card>
       </div>
-
     </div>
   </card>
 </template>
 <script>
-import NotificationTemplate from './Notifications/NotificationTemplate';
+import NotificationTemplate from "./Notifications/NotificationTemplate";
 
 export default {
   data() {
@@ -1597,5 +1640,4 @@ export default {
   }
 };
 </script>
-<style>
-</style>
+<style></style>

@@ -39,9 +39,7 @@ export default {
   },
   methods: {
     importAll(r) {
-      r.keys().forEach(key =>
-        this.imagepool.push(r(key))
-      );
+      r.keys().forEach(key => this.imagepool.push(r(key)));
       window.console.log(this.imagepool);
       // this.imagepool.forEach(img => {
       //   this.img_0 = img.pathLong;
@@ -51,7 +49,9 @@ export default {
     }
   },
   mounted() {
-    this.importAll(require.context("../assets/img/screenshots/", true, /\.jpg$/));
+    this.importAll(
+      require.context("../assets/img/screenshots/", true, /\.jpg$/)
+    );
   }
 };
 </script>
