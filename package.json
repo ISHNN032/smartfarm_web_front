@@ -29,6 +29,7 @@
     "vue-clickaway": "^2.1.0",
     "vue-notifyjs": "^0.4.3",
     "vue-router": "^3.0.1",
+    "vuetify": "2.4.3",
     "webpack-dev-server": "3.11.0"
   },
   "devDependencies": {
