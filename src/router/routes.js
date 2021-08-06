@@ -3,54 +3,43 @@ import DashboardLayout from "@/layout/dashboard/DashboardLayout.vue";
 import NotFound from "@/pages/NotFoundPage.vue";
 
 // Admin pages
-import Dashboard from "@/pages/Main.vue";
-import UserProfile from "@/pages/UserProfile.vue";
-import Typography from "@/pages/Typography.vue";
-import TableList from "@/pages/TableList.vue";
-import Icons from "@/pages/Controller.vue";
-import Maps from "@/pages/Camera.vue";
-import Notifications from "@/pages/Settings.vue";
+import Home from "@/pages/Home.vue";
+import Farm from "@/pages/Farm.vue";
+import Schedule from "@/pages/Schedule.vue";
+import Camera from "@/pages/Camera.vue";
+import Account from "@/pages/Account.vue";
+//import Account from "@/pages/Samples/Icons.vue";
 
 const routes = [
   {
     path: "/",
     component: DashboardLayout,
-    redirect: "/dashboard",
+    redirect: "/home",
     children: [
       {
-        path: "dashboard",
-        name: "main",
-        component: Dashboard
+        path: "home",
+        name: "Home",
+        component: Home
       },
       {
-        path: "stats",
-        name: "admin",
-        component: UserProfile
+        path: "farm",
+        name: "Farm",
+        component: Farm
       },
       {
-        path: "stores",
-        name: "dashboard",
-        component: TableList
+        path: "schedule",
+        name: "Schedule",
+        component: Schedule
       },
       {
-        path: "typography",
-        name: "data",
-        component: Typography
+        path: "camera",
+        name: "Camera",
+        component: Camera
       },
       {
-        path: "icons",
-        name: "controller",
-        component: Icons
-      },
-      {
-        path: "maps",
-        name: "camera",
-        component: Maps
-      },
-      {
-        path: "notifications",
-        name: "setting",
-        component: Notifications
+        path: "account",
+        name: "Account",
+        component: Account
       }
     ]
   },

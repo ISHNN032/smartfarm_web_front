@@ -41,10 +41,6 @@ import MovingArrow from "./MovingArrow.vue";
 import SidebarLink from "./SidebarLink";
 export default {
   props: {
-    title: {
-      type: String,
-      default: "스마트 팜 프로토타입"
-    },
     backgroundColor: {
       type: String,
       default: "black",
